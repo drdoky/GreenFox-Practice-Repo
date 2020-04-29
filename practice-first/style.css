@@ -1,0 +1,15 @@
+h1 {
+  background: purple;
+  color: white;
+}
+
+h2 {
+  background: red;
+  color: white;
+}
+
+p {
+  background: yellow;
+  color: green;
+  font-weight: bold;
+}

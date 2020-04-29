@@ -1,0 +1,138 @@
+html {
+  height: 100%;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: linear-gradient(#141e30, #243b55);
+}
+
+main {
+  width: 600px;
+  margin: 0 auto;
+}
+
+h1 {
+  color: #66ffff;
+}
+
+.newsletter-form {
+  color: #666666;
+  border: 2px solid #666666;
+  padding: 10px;
+  border-radius: 3px;
+  box-shadow: 6px 12px 6px #141e30;
+  position: relative;
+  background: linear-gradient(#243b55, #141e30);
+}
+
+h2 {
+  margin-top: 0;
+}
+
+a {
+  color: #3cb878;
+  text-decoration-line: none;
+  font-weight: bold;
+}
+
+a:hover {
+  color: white;
+  text-shadow: 0 0 2px #66ffff,
+               0 0 4px #66ffff,
+               0 0 8px #66ffff,
+               0 0 12px #66ffff;
+}
+
+input[type="email"] {
+  width: 100%;
+  box-sizing: border-box;
+  color: #666666;
+  border-radius: 3px;
+  margin: 0 0 8px;
+}
+
+input[type="submit"] {
+  width: 100%;
+  box-sizing: border-box;
+  color: white;
+  background: #3cb878;
+  border: 0;
+  height: 30px;
+  border-radius: 3px;
+  margin: 0 0 10px;
+  cursor: pointer;
+}
+
+.exit-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 21px;
+  height: 21px;
+  padding: 0;
+  text-align: center;
+  line-height: 20px;
+  cursor: pointer;
+  background: #444444;
+  border: 2px solid #666666;
+  border-radius: 4px;
+}
+
+.question-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 20px;
+  width: 100px;
+  height: 100px;
+  color: white;
+  font-size: 70px;
+  line-height: 95px;
+  text-align: center;
+  border-radius: 50%;
+  background: #3cb878;
+  z-index: 999;
+  cursor: pointer;
+}
+
+.question-button, .feature {
+  box-shadow: 0 0 3px #66ffff,
+              0 0 8px #66ffff;
+}
+
+.question-button:hover {
+  box-shadow: 0 0 3px #66ffff,
+              0 0 6px #66ffff,
+              0 0 9px #66ffff,
+              0 0 12px #66ffff;
+}
+
+.key-features {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+.feature {
+  background: #3cb878;
+  padding: 30px;
+  margin: 10px 0;
+  width: 21%;
+}
+
+.feature p {
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.feature p.fox {
+  font-size: 90px;
+  line-height: 90px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}

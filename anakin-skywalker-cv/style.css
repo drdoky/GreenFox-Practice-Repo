@@ -1,0 +1,381 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  background: url("https://i.imgur.com/IIUtC5H.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100vh;
+  font-size: 16px;
+  letter-spacing: 0px;
+  overflow-x: hidden;
+  /*overflow: hidden;*/
+  display: flex;
+  justify-content: center;
+  /*align-items: center;*/
+}
+
+.menu {
+  /*background: white;*/
+  width: 100%;
+  height: 120px;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.menucontent {
+  list-style: none;
+  overflow: hidden;
+  background: #222;
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-end;
+  width: 0%;
+  height: 100%;
+  flex-wrap: wrap;
+  transition: all 350ms ease;
+}
+
+.ds {
+  width: 100px;
+  margin: 10px;
+  border-radius: 50%;
+  box-shadow:
+    0 0 4px white,
+    0 0 7px white,
+    0 0 10px white,
+    0 0 15px lightskyblue,
+    0 0 15px skyblue,
+    0 0 15px blue,
+    0 0 15px blue;
+}
+
+.ds:hover {
+  box-shadow:
+    0 0 4px white,
+    0 0 7px white,
+    0 0 10px white,
+    0 0 15px red,
+    0 0 15px red,
+    0 0 15px red,
+    0 0 15px red;
+}
+
+.ds-icon {
+  margin-right: auto;
+}
+
+.menuitem {
+  color: #ddd;
+  display: flex;
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 2.5vw;
+  font-weight: bold;
+  text-transform: uppercase;
+  height: 120px;
+  /*outline: 1px solid red;*/
+  padding: 0 1.5vw 0;
+  cursor: pointer;
+  position: relative;
+  align-items: center;
+}
+
+.menuitem:hover {
+  border-bottom: 7px solid red;
+}
+
+#mbio:checked ~ .main-content .mbio {
+  visibility: visible;
+}
+
+#machi:checked ~ .main-content .machi {
+  visibility: visible;
+}
+
+#mexp:checked ~ .main-content .mexp {
+  visibility: visible;
+}
+
+#mtra:checked ~ .main-content .mtra {
+  visibility: visible;
+}
+
+#mpers:checked ~ .main-content .mpers {
+  visibility: visible;
+}
+
+#mbio:checked ~ .menu .menucontent .mbio .menuitem {
+  text-shadow:
+    0 0 2px white,
+    0 0 4px white,
+    0 0 6px white,
+    0 0 8px red,
+    0 0 9px red,
+    0 0 10px red,
+    0 0 11px red;
+}
+
+#machi:checked ~ .menu .menucontent .machi .menuitem {
+  text-shadow:
+    0 0 2px white,
+    0 0 4px white,
+    0 0 6px white,
+    0 0 8px red,
+    0 0 9px red,
+    0 0 10px red,
+    0 0 11px red;
+}
+
+#mexp:checked ~ .menu .menucontent .mexp .menuitem {
+  text-shadow:
+    0 0 2px white,
+    0 0 4px white,
+    0 0 6px white,
+    0 0 8px red,
+    0 0 9px red,
+    0 0 10px red,
+    0 0 11px red;
+}
+
+#mtra:checked ~ .menu .menucontent .mtra .menuitem {
+  text-shadow:
+    0 0 2px white,
+    0 0 4px white,
+    0 0 6px white,
+    0 0 8px red,
+    0 0 9px red,
+    0 0 10px red,
+    0 0 11px red;
+}
+
+#mpers:checked ~ .menu .menucontent .mpers .menuitem {
+  text-shadow:
+    0 0 2px white,
+    0 0 4px white,
+    0 0 6px white,
+    0 0 8px red,
+    0 0 9px red,
+    0 0 10px red,
+    0 0 11px red;
+}
+
+.menu-ebtn,
+.menu-btn {
+  position: absolute;
+  visibility: hidden;
+}
+
+.menu-icon {
+  background: #222;
+  width: 4%;
+  height: 120px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-icon,
+.nav-icon::before,
+.nav-icon::after {
+  background: #ccc;
+  display: block;
+  height: 5px;
+  background: #ccc;
+  border-radius: 2px;
+  position: relative;
+  box-shadow: 0 2px 5px rgba(200, 200, 200, .3);
+  transition: all 350ms ease;
+}
+
+.nav-icon {
+  width: 60%;
+}
+.nav-icon::before,
+.nav-icon::after {
+  content: "";
+  width: 100%;
+  position: absolute;
+  justify-content: center;
+}
+
+.nav-icon::before {
+  transform: translatey(-300%);
+}
+
+.nav-icon::after {
+  transform: translatey(300%);
+}
+
+#menu-btn:checked ~ .menucontent {
+  width: 96%;
+  min-height: 120px;
+}
+
+#menu-btn:checked ~ .menu-icon .nav-icon {
+  background: transparent;
+  box-shadow: none;
+}
+
+#menu-btn:checked ~ .menu-icon .nav-icon::before {
+  transform: rotate(-45deg);
+}
+
+#menu-btn:checked ~ .menu-icon .nav-icon::after {
+  transform: rotate(45deg);
+}
+
+.main-content {
+  width: 100%;
+  margin-top: 120px;
+}
+
+.iam {
+  font-size: .6em;
+}
+
+.name {
+  font-size: 1.2em;
+}
+
+.szakasz {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  width: 100%;
+  position: absolute;
+  visibility: hidden;
+}
+
+.idezet, .szoveg, .glassbox {
+  /*outline: 1px solid red;*/
+  margin: 50px;
+}
+
+.idezet, .szoveg {
+  background: #222;
+  color: #ccc;
+  max-width: 40%;
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 78px;
+  letter-spacing: -2px;
+  padding: 50px 50px 60px 70px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, .9);
+  flex-grow: 1;
+  position: relative;
+}
+
+.idezet::before {
+  font-family: 'Abril Fatface', cursive;
+  content:'\201C';
+  position: absolute;
+  top: -40px;
+  left: 0px;
+  font-size: 150px;
+}
+
+.glassbox {
+  position: relative;
+  padding: 50px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, .9);
+  overflow: hidden;
+  flex-grow: 2;
+  color: #000;
+}
+
+.glassbox::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  background: url("https://i.imgur.com/IIUtC5H.png");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: blur(8px);
+}
+
+h1, h2, p, span, ul, li {
+  position: relative;
+  z-index: 2;
+}
+
+p {
+  font-family: 'Oswald', sans-serif;
+  color: #ddd;
+  font-size: 20px;
+  text-shadow: 1px 1px 4px black;
+  text-shadow: 1px 1px 5px black;
+  text-shadow: 1px 1px 6px black;
+  text-shadow: 1px 1px 7px black;
+  line-height: 1.5em;
+  margin: 30px 50px 30px;
+}
+
+.lista {
+  font-family: 'Oswald', sans-serif;
+  color: #ddd;
+  list-style: square;
+  font-size: 20px;
+  line-height: 1.5em;
+  text-shadow: 1px 1px 4px black;
+  text-shadow: 1px 1px 5px black;
+  text-shadow: 1px 1px 6px black;
+  text-shadow: 1px 1px 7px black;
+  margin: 30px 50px 30px;
+  padding-left: 35px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.sub {
+  font-family: 'Merriweather', serif;
+  font-size: 18px;
+  font-style: italic;
+}
+
+.h1, .h2 {
+  font-size: 2em;
+}
+
+.h1 {
+  text-transform: uppercase;
+}
+
+.h2 {
+  letter-spacing: -1px;
+}
+
+.small {
+  font-size: 18px;
+}
+
+.lowergap {
+  margin-top: 3px;
+  margin-bottom: 3px;
+  line-height: 1em;
+}
+
+/*
+font-family: 'Patua One', cursive;
+font-family: 'Oswald', sans-serif;
+
+font-family: 'Fjalla One', sans-serif;
+font-family: 'Average', serif;
+
+font-family: 'Abril Fatface', cursive;
+
+font-family: 'Merriweather', serif;
+*/
